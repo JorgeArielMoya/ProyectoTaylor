@@ -5,7 +5,8 @@
 
 <PageTitle> Proyecto Taylor </PageTitle>
 
-@* Interfaz Grafica *@ 
+@* Interfaz Grafica *@
+@* Ariel *@
 <div class="container mt-3">
     <div class="row">
         <div class="col-12 col-lg-6 mb-3">
@@ -55,6 +56,7 @@
             </div>
         </div>
 
+        @* Ashley (Pelotera) *@
         <div class="col-12 col-lg-6 mb-3">
             <div class="card card-minimal shadow-sm h-100">
 
@@ -81,6 +83,7 @@
         </div>
     </div>
 
+    @* Jorge  *@
     <div class="row mx-0">
         <div class="card card-minimal shadow-sm px-0">
             <div class="card-header card-header-minimal text-center w-100">
@@ -106,6 +109,7 @@
 
 @* Logica del programa *@
 @code{
+    // Isaac
     private string Funcion { get; set; } = string.Empty;
 
     private string ValorC { get; set; } = string.Empty;
@@ -142,6 +146,7 @@
         return input;
     }
 
+    // Jorge
     private void CalcularDerivadas()
     {
         ResultadosDerivadas.Clear();
@@ -225,7 +230,7 @@
         
         for (int i = 0; i <= CantPolinomios; i++)
         {
-           if (i > 0) factorial *= i;
+            if (i > 0) factorial *= i;
 
             var linea = ResultadosDerivadas[i];
             var partes = linea.Split('=');
@@ -239,6 +244,7 @@
 
             string signo = coef < 0 ? " − " : (primero ? "" : " + ");
             double absCoef = Math.Abs(coef);
+
             string coefStr = absCoef.ToString("F4").TrimEnd('0').TrimEnd('.');
             string coefDisplay = Math.Abs(absCoef - 1.0) < 1e-10 && i > 0 ? "" : coefStr + " ";
 
@@ -272,6 +278,7 @@
         return sb.ToString();
     }
 
+    // Isaac
     private string ToSuperscript(int n)
     {
         var superscripts = new Dictionary<char, char>
